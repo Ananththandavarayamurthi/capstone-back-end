@@ -14,7 +14,7 @@ import calculation from "./routes/calculation.js";
 // MiddleWare
 app.use(express.json());
 const corsOptions ={
-    origin:'http://localhost:3000', 
+    origin:'https://fluffy-naiad-0e3320.netlify.app', 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }

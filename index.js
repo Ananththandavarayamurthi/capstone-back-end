@@ -13,13 +13,13 @@ import calculation from "./routes/calculation.js";
 
 // MiddleWare
 app.use(express.json());
-const corsOptions ={
-    origin:'https://fluffy-naiad-0e3320.netlify.app', 
-    credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200
-}
-app.use(cors(corsOptions));
-
+// const corsOptions ={
+//     origin:'https://fluffy-naiad-0e3320.netlify.app', 
+//     credentials:true,            //access-control-allow-credentials:true
+//     optionSuccessStatus:200
+// }
+// app.use(cors(corsOptions));
+app.use(cors())
 app.get("/", (req, res) => {
   res.json({ message: "welcome" });
 });

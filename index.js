@@ -13,7 +13,6 @@ import calculation from "./routes/calculation.js";
 
 // MiddleWare
 app.use(express.json());
-const cors = require('cors');
 const corsOptions ={
     origin:'http://localhost:3000', 
     credentials:true,            //access-control-allow-credentials:true

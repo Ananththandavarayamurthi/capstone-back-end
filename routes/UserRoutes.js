@@ -8,7 +8,7 @@ const client = await connection();
 // register
 router.post("/register", async (req, res) => {
   try {
-    let user = client.db("office").collection("employee");
+    let user = client.db("planner").collection("employee");
     let salt = await bcrypt.genSalt(10);
     let hash = await bcrypt.hash(req.body.password, salt);
     req.body.password = hash;
@@ -24,7 +24,7 @@ router.post("/login", async (req, res) => {
   try {
     // getting the data from the db for the sent email
     let user = await client
-      .db("office")
+      .db("planner")
       .collection("employee")
       .findOne({ email: req.body.email });
 

@@ -13,7 +13,7 @@ router.post("/project", async (req, res) => {
       request.color = "danger";
     } else if (request.state === "pending") {
       request.color = "secondary";
-    }x
+    }
 
     let response = client
       .db("planner")
